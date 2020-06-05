@@ -143,10 +143,15 @@ java -jar schemaspy-6.1.0.jar -t pgsql -dp postgresql-42.2.12.jar -host 127.0.0.
 
 
 
+### Resultado
 
-## Dockerización
+![Trazas de Ejecución de Schemapsy](https://github.com/vjmadrid/enmilocalfunciona-schemaspy/blob/master/images/postgresql-schemaspy-standalone-execution.png)
 
-N/A
+* Verificar que se dejan los resultados en el directorio establecido
+
+* Abrir con un navegador
+
+![Resultados de Schemapsy](https://github.com/vjmadrid/enmilocalfunciona-schemaspy/blob/master/images/postgresql-schemaspy-standalone-result.png)
 
 
 
