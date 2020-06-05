@@ -128,6 +128,8 @@ docker-compose up --build
 docker-compose up --build -d
 ```
 
+![Trazas de Ejecución de Schemapsy](https://github.com/vjmadrid/enmilocalfunciona-schemaspy/blob/master/images/schemaspy-external-execution.png)
+
 3. Comprobar que la imágen ha sido creada
 
 Verificar que parece como imágen Docker el nombre "schemaspy-mysql-external_nginx"
@@ -141,8 +143,7 @@ Verificar mediante un navegaor accediendo a la URL de publicación
 http://localhost:8081/
 ```
 
-![Resultados de Schemapsy]()
-
+![Resultados de Schemapsy](https://github.com/vjmadrid/enmilocalfunciona-schemaspy/blob/master/images/schemaspy-external-result.png)
 
 
 

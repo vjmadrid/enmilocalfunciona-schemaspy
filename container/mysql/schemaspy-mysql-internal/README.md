@@ -170,7 +170,7 @@ Verificar mediante un navegaor accediendo a la URL de publicación
 http://localhost:8081/
 ```
 
-![Resultados de Schemapsy](https://github.com/vjmadrid/enmilocalfunciona-schemaspy/blob/master/images/postgresql-schemaspy-standalone-result.png)
+![Resultados de Schemapsy](https://github.com/vjmadrid/enmilocalfunciona-schemaspy/blob/master/images/schemaspy-internal-result.png)
 
 
 
