@@ -1,0 +1,168 @@
+# standalone-schemaspy-postgresql
+
+Este proyecto representa un ejemplo de ejecución de **Schemaspy** como una librería Java para una base de datos **Postgresql** que se encuentre disponible y con datos.
+
+Como resultado de la ejecución se generá un directorio con los resultados en formato HTML
+
+
+
+
+
+## Stack Tecnológico
+
+* Java 8
+* [SchemaSpy](http://schemaspy.org/) - Utilidad de documentación de la base de datos
+* [Graphviz](https://graphviz.org/) - Generador de diagramas de base de datos
+* [Postgresql](https://www.postgresql.org/) - Base de Datos relacional (Version 11)
+
+Dependencias proyectos de arquitectura
+
+N/A
+
+Dependencias de terceros 
+
+* **postgresql** [42.2.12] : Conector Postgresql (compatible con la versión de la base de datos utilizada)
+* **schemaspy** [6.1.0] : Utilidad SchemaSpy (single-jar)
+
+
+
+
+
+## Prerrequisitos
+
+Define que elementos son necesarios para instalar el software
+
+* Java 8 instalado (1.5+ version requerido)
+* Base de datos a utilizar instalada y arrancada con datos
+* Driver de conexión a la base de datos utilizada
+* Graphviz instalado para la generación visual de los diagramas de relación
+
+
+
+
+
+## Instalación
+
+N/A
+
+
+
+
+
+## Testing
+
+N/A
+
+
+
+
+
+## Deploy
+
+N/A
+
+
+
+
+## Uso
+
+
+
+### Standalone con fichero de configuración
+
+Pasos a seguir
+
+* Arrancar un terminal
+* Localizar el PATH de esta funcionalidad : **standalone-schemaspy-postgresql**
+* Definir el fichero **"schemaspy.properties"** con todos los elementos de configuración de la base de datos con la que se va a trabajar
+
+Ejemplo de fichero "schemaspy.properties" utilizado
+
+```bash
+# Database Type
+schemaspy.t=pgsql
+
+# Path Database JDBC driver
+schemaspy.dp=postgresql-42.2.12.jar
+
+# Database Machine
+schemaspy.host=127.0.0.1
+schemaspy.port=5432
+
+# Database user
+schemaspy.u=test
+schemaspy.p=test
+
+# Database Name
+schemaspy.db=acme
+
+# Database Schema
+schemaspy.s=public
+
+# Path output folder for the generated result
+schemaspy.o=output
+```
+
+* Ejecutar el siguiente comando
+
+```bash
+java -jar schemaspy-6.1.0.jar 
+```
+
+Nota : Si no se indica nada, buscará en el directorio actual el fichero de configuración para ejecutarlo 
+
+
+Se puede establecer que ejecute un fichero concreto (por entorno, apuntando a un contenedor, etc.)
+
+```bash
+java -jar schemaspy-6.1.0.jar -configFile config/schemaspy-dev.properties
+```
+
+
+### Standalone con parámetros
+
+Pasos a seguir
+
+* Arrancar un terminal
+* Localizar el PATH de esta funcionalidad : **standalone-schemaspy-postgresql**
+* Ejecutar el siguiente comando con parámetros (No se usa eñ fichero de configuración)
+
+```bash
+java -jar schemaspy-6.1.0.jar -t pgsql -dp postgresql-42.2.12.jar -host 127.0.0.1 -port 5432 -u test -p test -db acme -s acme -o output
+```
+
+* -t : Tipo de base de datos de los identificados por la utilidad
+* -dp : Ubicación del driver de DB utilizado
+* -host : IP de la máquina donde se encuentra la base de datos
+* -port : Puerto de conexión a la base de datos (en muchos casos la definición del tipo y el driver lo establecen por defecto)
+* -u : Ususario
+* -p : Password
+* -db : Base de datos a la que conectar
+* -s : Esquema de base de datos
+* -o : Path de salida de los resultados del análisis
+
+
+
+
+## Dockerización
+
+N/A
+
+
+
+
+
+## Versionado
+
+**Nota :** [SemVer](http://semver.org/) es utilizado por el versionado
+
+Para ver las versiones disponibles ver los tags del repositorio
+
+
+
+
+
+## Autores
+
+* **Víctor Madrid**
+

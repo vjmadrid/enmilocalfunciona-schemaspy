@@ -2,6 +2,13 @@
 
 Este repositorio se encarga de servir como estructura de recursos utilidazados para los artículos publicados en la plataforma **enmilocalfunciona.io** relacionados con el uso de **[Schemaspy](http://schemaspy.org/)**
 
+* [Web Principal SchemaSpy](http://schemaspy.org/)
+* [Documentación SchemaSpy](https://schemaspy.readthedocs.io/en/latest/)
+* [Repositiorio de código Github](https://github.com/schemaspy/schemaspy)
+* [Repositorio de contenedores Docker Hub](https://hub.docker.com/r/schemaspy/schemaspy/)
+
+Schemaspy destaca porpProporciona un site web con **Documentación visual** sobre : tablas, volumetrías, columnas, constraints, routines, ... -> web-based
+
 Para ello se han planteado 2 enfoques de uso :
 
 **Standalone** : Ejecuta Schemaspy como una librería Java en base a 2 modos de ejecución (mediante ficheros y por parámetros) y generando los resultados en un directorio (requiere tener ciertas dependencias instaladas previamente)

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<database name="acme" schema="acme" type="MySQL - 5.7.30">
+   <tables>
+      <table catalog="acme" name="custom_role" numRows="2" remarks="" type="TABLE">
+         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4">
+            <child catalog="acme" column="role_id" foreignKey="custom_user_ibfk_1" implied="false" onDeleteCascade="false" table="custom_user"/>
+         </column>
+         <column autoUpdated="false" defaultValue="" digits="0" id="1" name="name" nullable="false" remarks="" size="15" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="created_at" nullable="true" remarks="" size="26" type="DATETIME" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="updated_at" nullable="true" remarks="" size="26" type="DATETIME" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="deleted_at" nullable="true" remarks="" size="26" type="DATETIME" typeCode="93"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+      </table>
+      <table catalog="acme" name="custom_user" numRows="2" remarks="" type="TABLE">
+         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="" digits="0" id="1" name="name" nullable="false" remarks="" size="15" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="2" name="role_id" nullable="false" remarks="" size="10" type="INT" typeCode="4">
+            <parent catalog="acme" column="id" foreignKey="custom_user_ibfk_1" implied="false" onDeleteCascade="false" table="custom_role"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="created_at" nullable="true" remarks="" size="26" type="DATETIME" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="updated_at" nullable="true" remarks="" size="26" type="DATETIME" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="deleted_at" nullable="true" remarks="" size="26" type="DATETIME" typeCode="93"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="role_id" unique="false">
+            <column ascending="true" name="role_id"/>
+         </index>
+      </table>
+   </tables>
+</database>

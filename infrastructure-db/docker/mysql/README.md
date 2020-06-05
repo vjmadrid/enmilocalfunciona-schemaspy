@@ -80,6 +80,10 @@ Pasos a seguir
 
 ```bash
 docker-compose up --build
+
+ó
+
+docker-compose up --build -d
 ```
 
 3. Comprobar que la imágen ha sido creada
