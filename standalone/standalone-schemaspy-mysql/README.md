@@ -143,10 +143,15 @@ java -jar schemaspy-6.1.0.jar -t mysql -dp mysql-connector-java-6.0.6.jar -host 
 
 
 
+### Resultado
 
-## Dockerización
+![Trazas de Ejecución de Schemapsy](https://github.com/vjmadrid/enmilocalfunciona-schemaspy/blob/master/images/mysql-schemaspy-standalone-execution.png)
 
-N/A
+* Verificar que se dejan los resultados en el directorio establecido
+
+* Abrir con un navegador
+
+![Resultados de Schemapsy](https://github.com/vjmadrid/enmilocalfunciona-schemaspy/blob/master/images/mysql-schemaspy-standalone-result.png)
 
 
 
