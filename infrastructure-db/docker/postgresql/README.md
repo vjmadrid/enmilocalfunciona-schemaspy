@@ -90,7 +90,7 @@ Verificar que parece como imágen Docker el nombre "postgresql_test"
 
 Verificar mediante un cliente de base datos que la conexión se puede realizar
 
-
+![Comprobación Conexión de Cliente de Base de datos](https://github.com/vjmadrid/enmilocalfunciona-schemaspy/blob/master/images/postgresql-client-test.png)
 
 
 
