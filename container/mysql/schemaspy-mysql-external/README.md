@@ -1,8 +1,8 @@
-# schemaspy-mysql-internal
+# schemaspy-mysql-external
 
 Conjunto de Contenedores Docker encargados de realizar una análisis de base de datos con **SchemaSpy** en **MySQL** publicando los resultados mediante **Nginx**
 
-La base de datos se carga en un contenedor a la vez que el resto de contenedores
+La base de datos se encuentra disponible (instalacion, contenedor o servicio) antes y de formae externa que el resto de contenedores
 
 
 
@@ -47,19 +47,6 @@ version: '3.7'
 
 services:
 
-   mysql-test:
-      build: ./mysql-5.7
-      environment:
-         MYSQL_ROOT_PASSWORD: root
-         MYSQL_DATABASE: acme
-         MYSQL_USER: test
-         MYSQL_PASSWORD: test
-      volumes:
-         - ./mysql-5.7/config/my.cnf:/etc/mysql/conf.d/my.cnf
-         - ./mysql-5.7/sql-scripts:/docker-entrypoint-initdb.d
-      ports:
-         - 3306:3306
-
    schemaspy-mysql:
       build: ./schemaspy-mysql
       volumes:
@@ -75,19 +62,6 @@ services:
       volumes:
          - ./schemaspy-mysql/output:/usr/share/nginx/html:ro
 ```
-
-**Servicio mysql-test** : Genera un contenedor de base de datos MySQL basado en la definición de un fichero Dockerfile, se establecen una serie de variables de entorno necesarias para su ejecución, se definirán una serie de volúmenes y se publicará por el puerto específico de la aplicación
-
-Configuración del fichero "Dockerfile"
-
-```bash
-FROM mysql:5.7
-
-COPY ./sql-scripts/*.sql /docker-entrypoint-initdb.d/
-```
-
-En este fichero se establece la versión a utilizar y se le indicará los ficheros de carga de datos para disponer de datos iniciales
-
 
 **Servicio schemaspy-mysql** : Genera un contenedor donde se ejecutará el análisis de Schemaspy, se generarán una serie de volumenes y se facilitará un parametro de ejecución
 
@@ -142,7 +116,7 @@ En este fichero se establece la versión a utilizar y se le indicará cierta inf
 Pasos a seguir
 
 
-1. Localizar el directorio principal del proyecto : <PROJECT_PATH> (container/mysql/schemspy-mysql-internal)
+1. Localizar el directorio principal del proyecto : <PROJECT_PATH> (container/mysql/schemspy-mysql-external)
 
 2. Ejecutar el siguiente comando
 
@@ -156,9 +130,8 @@ docker-compose up --build -d
 
 3. Comprobar que la imágen ha sido creada
 
-Verificar que parece como imágen Docker el nombre "schemaspy-mysql-internal_nginx"
-Verificar que parece como imágen Docker el nombre "schemaspy-mysql-internal_schemaspy-mysql"
-Verificar que parece como imágen Docker el nombre "schemaspy-mysql-internal_mysql-test"
+Verificar que parece como imágen Docker el nombre "schemaspy-mysql-external_nginx"
+Verificar que parece como imágen Docker el nombre "schemaspy-mysql-external_schemaspy-mysql"
 
 4. Comprobar que la aplicación ha sido desplegada correctamente
 

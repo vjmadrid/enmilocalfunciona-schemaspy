@@ -1,0 +1,9 @@
+
+# Log file
+*.log
+
+target/
+bin/
+tmp/
+output/
+

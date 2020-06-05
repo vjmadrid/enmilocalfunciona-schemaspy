@@ -4,7 +4,6 @@ services:
 
    schemaspy-mysql:
       build: ./schemaspy-mysql
-      container_name: schemaspy
       volumes:
          - ./schemaspy-mysql/output:/app/output/
          - ./schemaspy-mysql/config/schemaspy.properties:/app/config/schemaspy.properties
@@ -13,7 +12,6 @@ services:
 
    nginx:
       build: ./nginx
-      container_name: nginx
       ports:
          - "8081:80"
       volumes:
