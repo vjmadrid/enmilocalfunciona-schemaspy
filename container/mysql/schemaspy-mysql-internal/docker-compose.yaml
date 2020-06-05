@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+
+   mysql-test:
+      build: ./mysql-5.7
+      environment:
+         MYSQL_ROOT_PASSWORD: root
+         MYSQL_DATABASE: acme
+         MYSQL_USER: test
+         MYSQL_PASSWORD: test
+      volumes:
+         - ./mysql-5.7/config/my.cnf:/etc/mysql/conf.d/my.cnf
+         - ./mysql-5.7/sql-scripts:/docker-entrypoint-initdb.d
+      ports:
+         - 3306:3306
+
+   schemaspy-mysql:
+      build: ./schemaspy-mysql
+      volumes:
+         - ./schemaspy-mysql/output:/app/output/
+         - ./schemaspy-mysql/config/schemaspy.properties:/app/config/schemaspy.properties
+      command: ["-configFile", "/config/schemaspy.properties"]
+      network_mode: host
+
+   nginx:
+      build: ./nginx
+      ports:
+         - "8081:80"
+      volumes:
+         - ./schemaspy-mysql/output:/usr/share/nginx/html:ro

@@ -149,7 +149,7 @@ java -jar schemaspy-6.1.0.jar -t pgsql -dp postgresql-42.2.12.jar -host 127.0.0.
 
 * Verificar que se dejan los resultados en el directorio establecido
 
-* Abrir con un navegador
+* Abrir con un navegador el fichero index.html
 
 ![Resultados de Schemapsy](https://github.com/vjmadrid/enmilocalfunciona-schemaspy/blob/master/images/postgresql-schemaspy-standalone-result.png)
 

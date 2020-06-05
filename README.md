@@ -13,7 +13,7 @@ Para ello se han planteado 2 enfoques de uso :
 
 **Standalone** : Ejecuta Schemaspy como una librería Java en base a 2 modos de ejecución (mediante ficheros y por parámetros) y generando los resultados en un directorio (requiere tener ciertas dependencias instaladas previamente)
 
-**Container** : Ejecuta Schemaspy dentro de un contenedor como una librería Java en base a la configuración de un fichero, generando los resultados en un directorio y exponiendo dichos resultados mediante el uso de Nginx
+**Container** : Ejecuta Schemaspy dentro de un contenedor como una librería Java en base a la configuración de un fichero, generando los resultados en un directorio y exponiendo dichos resultados mediante el uso de Nginx. En este caso también se enseñarán 2 modos de ejecución pero basados en la incorporación de forma interna o externa de la base de datos.
 
 
 
@@ -90,6 +90,10 @@ Directorio encargado de almacenar el modo de uso de Schemaspy que lo ejecuta com
 
 Directorio encargado de almacenar el modo de uso de Schemaspy que lo ejecuta como un contenedor
 
+Se seguiran 2 modos de uso :
+
+* Internal : Hará uso de una BD que además será un contendor
+* External : Hará uso de una BD externa arrancada, funcionando y con juego de datos
 
 
 ## Autor

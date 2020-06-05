@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>AppDet - DAE Database</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>DAE</b> Database</a>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>AppDet</h1><p><span id="recordNumber">4</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="AppDetId">AppDetId</span></td>
+                                    <td>int</td>
+                                    <td>4</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>(NEXT VALUE FOR [dbo].[AppDetSeq])</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="AppId">AppId</span></td>
+                                    <td>int</td>
+                                    <td>4</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="AppDet.AppId references App.AppId via FK_AppDet_AppId"><a href='App.html'>App</a><span class='relatedKey'>.AppId</span></td>
+                                                <td class="constraint detail">FK_AppDet_AppId<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="LanguageId">LanguageId</span></td>
+                                    <td>smallint</td>
+                                    <td>2</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="AppDet.LanguageId references Language.LanguageId via FK_AppDet_Language"><a href='Language.html'>Language</a><span class='relatedKey'>.LanguageId</span></td>
+                                                <td class="constraint detail">FK_AppDet_Language<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="AppName">AppName</span></td>
+                                    <td>nvarchar</td>
+                                    <td>100</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="AppDes">AppDes</span></td>
+                                    <td>nvarchar</td>
+                                    <td>600</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="CreatedBy">CreatedBy</span></td>
+                                    <td>nvarchar</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="CreatedAt">CreatedAt</span></td>
+                                    <td>datetime</td>
+                                    <td>16,3</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>(sysdatetime())</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ModifiedBy">ModifiedBy</span></td>
+                                    <td>nvarchar</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ModifiedAt">ModifiedAt</span></td>
+                                    <td>datetime</td>
+                                    <td>16,3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PK_AppDet</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>AppDetId</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> IDX_AppLanguage</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>AppId + LanguageId</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="AppDet.html" target="_top" title="AppDet" alt="" coords="257,173,573,507">
+<area shape="rect" id="node2" href="App.html" target="_top" title="App" alt="" coords="5,5,213,416">
+<area shape="rect" id="node3" href="Language.html" target="_top" title="Language" alt="" coords="23,433,196,551">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/AppDet.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="ActionDet.html" target="_top" title="ActionDet" alt="" coords="306,2220,469,2308">
+<area shape="rect" id="node2" href="Language.html" target="_top" title="Language" alt="" coords="29,1497,202,1615">
+<area shape="rect" id="node3" href="ActionTypeDet.html" target="_top" title="ActionTypeDet" alt="" coords="288,2325,487,2413">
+<area shape="rect" id="node4" href="App.html" target="_top" title="App" alt="" coords="283,3168,491,3579">
+<area shape="rect" id="node5" href="AppArchitecture.html" target="_top" title="AppArchitecture" alt="" coords="9,3443,222,3531">
+<area shape="rect" id="node6" href="AppBusiness.html" target="_top" title="AppBusiness" alt="" coords="25,2787,206,2875">
+<area shape="rect" id="node7" href="AppCategory.html" target="_top" title="AppCategory" alt="" coords="23,2905,207,2993">
+<area shape="rect" id="node8" href="AppDatabase.html" target="_top" title="AppDatabase" alt="" coords="22,3232,209,3320">
+<area shape="rect" id="node9" href="AppExecMode.html" target="_top" title="AppExecMode" alt="" coords="19,3017,211,3105">
+<area shape="rect" id="node10" href="AppProgLanguage.html" target="_top" title="AppProgLanguage" alt="" coords="5,3337,225,3425">
+<area shape="rect" id="node11" href="AppStatus.html" target="_top" title="AppStatus" alt="" coords="33,3125,197,3213">
+<area shape="rect" id="node12" href="AppType.html" target="_top" title="AppType" alt="" coords="39,2661,192,2749">
+<area shape="rect" id="node13" href="Manager.html" target="_top" title="Manager" alt="" coords="39,3548,191,3636">
+<area shape="rect" id="node14" href="AppBusinessDet.html" target="_top" title="AppBusinessDet" alt="" coords="283,2747,491,2835">
+<area shape="rect" id="node15" href="AppCategoryDet.html" target="_top" title="AppCategoryDet" alt="" coords="282,2852,493,2940">
+<area shape="rect" id="node16" href="AppDet.html" target="_top" title="AppDet" alt="" coords="549,1825,865,2159">
+<area shape="rect" id="node17" href="AppExecModeDet.html" target="_top" title="AppExecModeDet" alt="" coords="278,2957,497,3045">
+<area shape="rect" id="node18" href="AppLicense.html" target="_top" title="AppLicense" alt="" coords="621,2445,793,2533">
+<area shape="rect" id="node19" href="AppLicenseDet.html" target="_top" title="AppLicenseDet" alt="" coords="909,1416,1108,1504">
+<area shape="rect" id="node20" href="AppLicenseTypeDet.html" target="_top" title="AppLicenseTypeDet" alt="" coords="269,2431,505,2519">
+<area shape="rect" id="node21" href="AppStatusDet.html" target="_top" title="AppStatusDet" alt="" coords="292,3063,483,3151">
+<area shape="rect" id="node22" href="AppTypeDet.html" target="_top" title="AppTypeDet" alt="" coords="297,2641,477,2729">
+<area shape="rect" id="node23" href="AppvDet.html" target="_top" title="AppvDet" alt="" coords="311,2536,463,2624">
+<area shape="rect" id="node24" href="EngineDet.html" target="_top" title="EngineDet" alt="" coords="306,5,469,93">
+<area shape="rect" id="node25" href="FunctionLetDet.html" target="_top" title="FunctionLetDet" alt="" coords="285,111,489,199">
+<area shape="rect" id="node26" href="FunctionTypeDet.html" target="_top" title="FunctionTypeDet" alt="" coords="279,216,496,304">
+<area shape="rect" id="node27" href="Install.html" target="_top" title="Install" alt="" coords="638,3171,777,3259">
+<area shape="rect" id="node28" href="InstallDet.html" target="_top" title="InstallDet" alt="" coords="928,1573,1089,1661">
+<area shape="rect" id="node29" href="InstallLineDet.html" target="_top" title="InstallLineDet" alt="" coords="291,321,484,409">
+<area shape="rect" id="node30" href="InstallTypeDet.html" target="_top" title="InstallTypeDet" alt="" coords="288,427,487,515">
+<area shape="rect" id="node31" href="PackageApp.html" target="_top" title="PackageApp" alt="" coords="619,3065,796,3153">
+<area shape="rect" id="node32" href="PackageDeployDet.html" target="_top" title="PackageDeployDet" alt="" coords="274,568,501,656">
+<area shape="rect" id="node33" href="PackageDet.html" target="_top" title="PackageDet" alt="" coords="300,673,475,761">
+<area shape="rect" id="node34" href="PackageOriginDet.html" target="_top" title="PackageOriginDet" alt="" coords="277,779,498,867">
+<area shape="rect" id="node35" href="PackagePublishDet.html" target="_top" title="PackagePublishDet" alt="" coords="272,884,503,972">
+<area shape="rect" id="node36" href="PackageStatusDet.html" target="_top" title="PackageStatusDet" alt="" coords="276,989,499,1077">
+<area shape="rect" id="node37" href="ProjectDet.html" target="_top" title="ProjectDet" alt="" coords="304,1131,471,1219">
+<area shape="rect" id="node38" href="RemediationDet.html" target="_top" title="RemediationDet" alt="" coords="282,1236,493,1324">
+<area shape="rect" id="node39" href="RoleDet.html" target="_top" title="RoleDet" alt="" coords="314,1341,461,1429">
+<area shape="rect" id="node40" href="StageDet.html" target="_top" title="StageDet" alt="" coords="310,1447,465,1535">
+<area shape="rect" id="node41" href="StageNoteDet.html" target="_top" title="StageNoteDet" alt="" coords="292,1552,483,1640">
+<area shape="rect" id="node42" href="StageStatusDet.html" target="_top" title="StageStatusDet" alt="" coords="286,1693,489,1781">
+<area shape="rect" id="node43" href="TrackDet.html" target="_top" title="TrackDet" alt="" coords="310,1799,465,1887">
+<area shape="rect" id="node44" href="TrackNoteDet.html" target="_top" title="TrackNoteDet" alt="" coords="291,1904,483,1992">
+<area shape="rect" id="node45" href="TrackStatusDet.html" target="_top" title="TrackStatusDet" alt="" coords="286,2009,489,2097">
+<area shape="rect" id="node46" href="UserStatusDet.html" target="_top" title="UserStatusDet" alt="" coords="290,2115,485,2203">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/AppDet.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="AppDet.html" target="_top" title="AppDet" alt="" coords="257,173,573,507">
+<area shape="rect" id="node2" href="App.html" target="_top" title="App" alt="" coords="5,5,213,416">
+<area shape="rect" id="node3" href="Language.html" target="_top" title="Language" alt="" coords="23,433,196,551">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/AppDet.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="ActionDet.html" target="_top" title="ActionDet" alt="" coords="306,1480,469,1568">
+<area shape="rect" id="node2" href="Language.html" target="_top" title="Language" alt="" coords="29,1617,202,1735">
+<area shape="rect" id="node3" href="ActionTypeDet.html" target="_top" title="ActionTypeDet" alt="" coords="288,1585,487,1673">
+<area shape="rect" id="node4" href="App.html" target="_top" title="App" alt="" coords="283,3237,491,3648">
+<area shape="rect" id="node5" href="AppArchitecture.html" target="_top" title="AppArchitecture" alt="" coords="9,3551,222,3639">
+<area shape="rect" id="node6" href="AppBusiness.html" target="_top" title="AppBusiness" alt="" coords="25,2717,206,2805">
+<area shape="rect" id="node7" href="AppCategory.html" target="_top" title="AppCategory" alt="" coords="23,2873,207,2961">
+<area shape="rect" id="node8" href="AppDatabase.html" target="_top" title="AppDatabase" alt="" coords="22,3340,209,3428">
+<area shape="rect" id="node9" href="AppExecMode.html" target="_top" title="AppExecMode" alt="" coords="19,3004,211,3092">
+<area shape="rect" id="node10" href="AppLicense.html" target="_top" title="AppLicense" alt="" coords="29,3235,201,3323">
+<area shape="rect" id="node11" href="AppProgLanguage.html" target="_top" title="AppProgLanguage" alt="" coords="5,3445,225,3533">
+<area shape="rect" id="node12" href="AppStatus.html" target="_top" title="AppStatus" alt="" coords="33,3123,197,3211">
+<area shape="rect" id="node13" href="AppType.html" target="_top" title="AppType" alt="" coords="39,2608,192,2696">
+<area shape="rect" id="node14" href="Manager.html" target="_top" title="Manager" alt="" coords="39,3656,191,3744">
+<area shape="rect" id="node15" href="AppBusinessDet.html" target="_top" title="AppBusinessDet" alt="" coords="283,2711,491,2799">
+<area shape="rect" id="node16" href="AppCategoryDet.html" target="_top" title="AppCategoryDet" alt="" coords="282,2816,493,2904">
+<area shape="rect" id="node17" href="AppDet.html" target="_top" title="AppDet" alt="" coords="549,2468,865,2801">
+<area shape="rect" id="node18" href="AppExecModeDet.html" target="_top" title="AppExecModeDet" alt="" coords="278,2921,497,3009">
+<area shape="rect" id="node19" href="AppLicenseDet.html" target="_top" title="AppLicenseDet" alt="" coords="288,3132,487,3220">
+<area shape="rect" id="node20" href="AppLicenseTypeDet.html" target="_top" title="AppLicenseTypeDet" alt="" coords="269,1727,505,1815">
+<area shape="rect" id="node21" href="AppStatusDet.html" target="_top" title="AppStatusDet" alt="" coords="292,3027,483,3115">
+<area shape="rect" id="node22" href="AppTypeDet.html" target="_top" title="AppTypeDet" alt="" coords="297,2605,477,2693">
+<area shape="rect" id="node23" href="AppvDet.html" target="_top" title="AppvDet" alt="" coords="311,1832,463,1920">
+<area shape="rect" id="node24" href="EngineDet.html" target="_top" title="EngineDet" alt="" coords="306,1937,469,2025">
+<area shape="rect" id="node25" href="FunctionLetDet.html" target="_top" title="FunctionLetDet" alt="" coords="285,2043,489,2131">
+<area shape="rect" id="node26" href="FunctionTypeDet.html" target="_top" title="FunctionTypeDet" alt="" coords="279,2148,496,2236">
+<area shape="rect" id="node27" href="Install.html" target="_top" title="Install" alt="" coords="638,2976,777,3064">
+<area shape="rect" id="node28" href="InstallDet.html" target="_top" title="InstallDet" alt="" coords="909,2315,1071,2403">
+<area shape="rect" id="node29" href="InstallLineDet.html" target="_top" title="InstallLineDet" alt="" coords="291,2289,484,2377">
+<area shape="rect" id="node30" href="InstallTypeDet.html" target="_top" title="InstallTypeDet" alt="" coords="288,2395,487,2483">
+<area shape="rect" id="node31" href="PackageApp.html" target="_top" title="PackageApp" alt="" coords="619,3240,796,3328">
+<area shape="rect" id="node32" href="PackageDeployDet.html" target="_top" title="PackageDeployDet" alt="" coords="274,2500,501,2588">
+<area shape="rect" id="node33" href="PackageDet.html" target="_top" title="PackageDet" alt="" coords="300,5,475,93">
+<area shape="rect" id="node34" href="PackageOriginDet.html" target="_top" title="PackageOriginDet" alt="" coords="277,111,498,199">
+<area shape="rect" id="node35" href="PackagePublishDet.html" target="_top" title="PackagePublishDet" alt="" coords="272,216,503,304">
+<area shape="rect" id="node36" href="PackageStatusDet.html" target="_top" title="PackageStatusDet" alt="" coords="276,321,499,409">
+<area shape="rect" id="node37" href="ProjectDet.html" target="_top" title="ProjectDet" alt="" coords="304,427,471,515">
+<area shape="rect" id="node38" href="RemediationDet.html" target="_top" title="RemediationDet" alt="" coords="282,532,493,620">
+<area shape="rect" id="node39" href="RoleDet.html" target="_top" title="RoleDet" alt="" coords="314,637,461,725">
+<area shape="rect" id="node40" href="StageDet.html" target="_top" title="StageDet" alt="" coords="310,743,465,831">
+<area shape="rect" id="node41" href="StageNoteDet.html" target="_top" title="StageNoteDet" alt="" coords="292,848,483,936">
+<area shape="rect" id="node42" href="StageStatusDet.html" target="_top" title="StageStatusDet" alt="" coords="286,953,489,1041">
+<area shape="rect" id="node43" href="TrackDet.html" target="_top" title="TrackDet" alt="" coords="310,1059,465,1147">
+<area shape="rect" id="node44" href="TrackNoteDet.html" target="_top" title="TrackNoteDet" alt="" coords="291,1164,483,1252">
+<area shape="rect" id="node45" href="TrackStatusDet.html" target="_top" title="TrackStatusDet" alt="" coords="286,1269,489,1357">
+<area shape="rect" id="node46" href="UserStatusDet.html" target="_top" title="UserStatusDet" alt="" coords="290,1375,485,1463">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/AppDet.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+
+   schemaspy-mysql:
+      build: ./schemaspy-mysql
+      container_name: schemaspy
+      volumes:
+         - ./schemaspy-mysql/output:/app/output/
+         - ./schemaspy-mysql/config/schemaspy.properties:/app/config/schemaspy.properties
+      command: ["-configFile", "/config/schemaspy.properties"]
+      network_mode: host
+
+   nginx:
+      build: ./nginx
+      container_name: nginx
+      ports:
+         - "8081:80"
+      volumes:
+         - ./schemaspy-mysql/output:/usr/share/nginx/html:ro
