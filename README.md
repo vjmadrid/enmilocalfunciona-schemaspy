@@ -7,13 +7,15 @@ Este repositorio se encarga de servir como estructura de recursos utilidazados p
 * [Repositiorio de código Github](https://github.com/schemaspy/schemaspy)
 * [Repositorio de contenedores Docker Hub](https://hub.docker.com/r/schemaspy/schemaspy/)
 
-Schemaspy destaca porpProporciona un site web con **Documentación visual** sobre : tablas, volumetrías, columnas, constraints, routines, ... -> web-based
+Schemaspy destaca por proporciona un site web con **Documentación visual** sobre : tablas, volumetrías, columnas, constraints, routines, ... -> web-based
 
 Para ello se han planteado 2 enfoques de uso :
 
-**Standalone** : Ejecuta Schemaspy como una librería Java en base a 2 modos de ejecución (mediante ficheros y por parámetros) y generando los resultados en un directorio (requiere tener ciertas dependencias instaladas previamente)
+**Standalone** : Ejecuta Schemaspy como una librería Java independiente en base a 2 modos de ejecución (mediante ficheros y por parámetros) y generando los resultados HTML en un directorio
 
-**Container** : Ejecuta Schemaspy dentro de un contenedor como una librería Java en base a la configuración de un fichero, generando los resultados en un directorio y exponiendo dichos resultados mediante el uso de Nginx. En este caso también se enseñarán 2 modos de ejecución pero basados en la incorporación de forma interna o externa de la base de datos.
+IMPORTANTE : En este caso Schemaspu requiere tener ciertas dependencias instaladas previamente ([Graphviz](https://graphviz.org/))
+
+**Container** : Ejecuta Schemaspy dentro de un contenedor como una librería Java en base a la configuración de un fichero, generando los resultados HTML en un directorio y exponiendo dichos resultados mediante el uso de Nginx. En este caso también se enseñarán 2 modos de ejecución pero basados en la incorporación de forma interna o externa de la base de datos.
 
 
 
