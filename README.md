@@ -13,10 +13,11 @@ Para ello se han planteado 2 enfoques de uso :
 
 **Standalone** : Ejecuta Schemaspy como una librería Java independiente en base a 2 modos de ejecución (mediante ficheros y por parámetros) y generando los resultados HTML en un directorio
 
-IMPORTANTE : En este caso Schemaspu requiere tener ciertas dependencias instaladas previamente ([Graphviz](https://graphviz.org/))
+IMPORTANTE : En este caso Schemaspy requiere tener ciertas dependencias instaladas previamente ([Graphviz](https://graphviz.org/))
 
-**Container** : Ejecuta Schemaspy dentro de un contenedor como una librería Java en base a la configuración de un fichero, generando los resultados HTML en un directorio y exponiendo dichos resultados mediante el uso de Nginx. En este caso también se enseñarán 2 modos de ejecución pero basados en la incorporación de forma interna o externa de la base de datos.
+**Container** : Ejecuta Schemaspy dentro de un contenedor como una librería Java independiente en base a la configuración de un fichero, generando los resultados HTML en un directorio y exponiendo dichos resultados mediante el uso de Nginx. En este caso también se enseñarán 2 modos de ejecución pero basados en la incorporación de forma interna o externa de la base de datos.
 
+IMPORTANTE : En este caso Schemaspy tendrá las dependencias instaladas en el container ([Graphviz](https://graphviz.org/))
 
 
 
