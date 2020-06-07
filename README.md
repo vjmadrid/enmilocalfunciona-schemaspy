@@ -2,8 +2,8 @@
 
 Este repositorio se encarga de servir como estructura de recursos utilizados para los artículos publicados en la plataforma **enmilocalfunciona.io** relacionados con el uso de **[Schemaspy](http://schemaspy.org/)**
 
-* [Web Principal SchemaSpy](http://schemaspy.org/)
-* [Documentación SchemaSpy](https://schemaspy.readthedocs.io/en/latest/)
+* [Web Principal](http://schemaspy.org/)
+* [Documentación](https://schemaspy.readthedocs.io/en/latest/)
 * [Repositiorio de código Github](https://github.com/schemaspy/schemaspy)
 * [Repositorio de contenedores Docker Hub](https://hub.docker.com/r/schemaspy/schemaspy/)
 
