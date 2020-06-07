@@ -1,6 +1,6 @@
 # enmilocalfunciona-schemaspy
 
-Este repositorio se encarga de servir como estructura de recursos utilidazados para los artículos publicados en la plataforma **enmilocalfunciona.io** relacionados con el uso de **[Schemaspy](http://schemaspy.org/)**
+Este repositorio se encarga de servir como estructura de recursos utilizados para los artículos publicados en la plataforma **enmilocalfunciona.io** relacionados con el uso de **[Schemaspy](http://schemaspy.org/)**
 
 * [Web Principal SchemaSpy](http://schemaspy.org/)
 * [Documentación SchemaSpy](https://schemaspy.readthedocs.io/en/latest/)
