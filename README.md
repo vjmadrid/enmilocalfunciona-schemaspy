@@ -26,7 +26,7 @@ IMPORTANTE : En este caso Schemaspy tendrá las dependencias instaladas en el co
 * Java 8
 * [Graphviz](https://graphviz.org/) - Generador de diagramas de base de datos
 * [SchemaSpy](http://schemaspy.org/) - Utilidad de documentación de la base de datos
-* [Docker](https://www.docker.com/) - Technología de Contenedores/Containers
+* [Docker](https://www.docker.com/) - Tecnología de Contenedores/Containers
 * [Docker Hub](https://hub.docker.com/) - Repositorio de Docker Publico
 * [Nginx](https://www.nginx.com/) - Servidor Web / Proxy Inverso
 
@@ -56,7 +56,7 @@ Define que elementos son necesarios para instalar el software
 
 Se encuentra organizado en 3 áreas :
 
-* infraestructure-db
+* infrastructure-db
 * standalone
 * containers
 
@@ -75,7 +75,7 @@ Las base de datos utilizadas son :
 
 Para ello, se hará uso de los ficheros "docker-compose.yaml" y Dockerfile donde se detallarán detalles de la versión utilizada, definición de usuarios utilizados, pre-carga inicial de datos, etc. 
 
-IMPORTANTE : Seguir en detalle el ficherio explicativo de cada caso.
+IMPORTANTE : Seguir en detalle el fichero explicativo de cada caso.
 
 
 
