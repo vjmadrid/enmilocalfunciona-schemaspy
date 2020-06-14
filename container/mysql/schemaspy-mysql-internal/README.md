@@ -18,7 +18,7 @@ Dependencias con Proyectos de Arquitectura
 
 N/A
 
-Dependecias con Terceros
+Dependencias con Terceros
 
 N/A
 
@@ -156,11 +156,11 @@ docker-compose up --build -d
 
 ![Trazas de Ejecución de Schemapsy](https://github.com/vjmadrid/enmilocalfunciona-schemaspy/blob/master/images/schemaspy-internal-execution.png)
 
-3. Comprobar que la imágen ha sido creada
+3. Comprobar que la imagen ha sido creada
 
-Verificar que parece como imágen Docker el nombre "schemaspy-mysql-internal_nginx"
-Verificar que parece como imágen Docker el nombre "schemaspy-mysql-internal_schemaspy-mysql"
-Verificar que parece como imágen Docker el nombre "schemaspy-mysql-internal_mysql-test"
+Verificar que parece como imagen Docker el nombre "schemaspy-mysql-internal_nginx"
+Verificar que parece como imagen Docker el nombre "schemaspy-mysql-internal_schemaspy-mysql"
+Verificar que parece como imagen Docker el nombre "schemaspy-mysql-internal_mysql-test"
 
 4. Comprobar que la aplicación ha sido desplegada correctamente
 

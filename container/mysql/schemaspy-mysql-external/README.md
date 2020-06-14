@@ -18,7 +18,7 @@ Dependencias con Proyectos de Arquitectura
 
 N/A
 
-Dependecias con Terceros
+Dependencias con Terceros
 
 N/A
 
