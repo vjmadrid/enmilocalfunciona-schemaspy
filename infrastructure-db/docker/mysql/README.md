@@ -86,9 +86,9 @@ docker-compose up --build
 docker-compose up --build -d
 ```
 
-3. Comprobar que la imágen ha sido creada
+3. Comprobar que la imagen ha sido creada
 
-Verificar que parece como imágen Docker el nombre "mysql_test"
+Verificar que parece como imagen Docker el nombre "mysql_test"
 
 4. Comprobar que la aplicación ha sido desplegada correctamente
 
